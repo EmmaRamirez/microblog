@@ -1,0 +1,144 @@
+2018-06-11 15:57:58,474 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 15:58:16,178 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 15:58:25,001 ERROR: Exception on /user/katy [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/d/Code/microblog/app/routes.py", line 87, in user
+    user = User.query(username=username).first_or_404()
+TypeError: 'BaseQuery' object is not callable
+2018-06-11 15:58:31,109 ERROR: Exception on /favicon.ico [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/usr/local/lib/python3.5/dist-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/mnt/d/Code/microblog/app/errors.py", line 11, in interal_error
+    return render-template('500.html'), 500
+NameError: name 'render' is not defined
+2018-06-11 15:58:32,505 ERROR: Exception on /user/emma [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/d/Code/microblog/app/routes.py", line 87, in user
+    user = User.query(username=username).first_or_404()
+TypeError: 'BaseQuery' object is not callable
+2018-06-11 15:58:32,884 ERROR: Exception on /favicon.ico [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/usr/local/lib/python3.5/dist-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/mnt/d/Code/microblog/app/errors.py", line 11, in interal_error
+    return render-template('500.html'), 500
+NameError: name 'render' is not defined
+2018-06-11 15:58:51,889 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:01:53,675 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:02:08,203 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:09:00,536 ERROR: Exception on /user/emma [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/d/Code/microblog/app/routes.py", line 87, in user
+    user = User.query(username=username).first_or_404()
+TypeError: 'BaseQuery' object is not callable
+2018-06-11 16:09:14,986 ERROR: Exception on /user/emma [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/d/Code/microblog/app/routes.py", line 87, in user
+    user = User.query(username=username).first_or_404()
+TypeError: 'BaseQuery' object is not callable
+2018-06-11 16:14:39,608 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:14:59,753 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:15:21,866 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:15:34,743 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:16:06,261 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:16:18,505 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
+2018-06-11 16:34:15,919 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:43]
