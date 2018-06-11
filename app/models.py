@@ -2,8 +2,7 @@ from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from hashlib import md5
-from app import login
-from app import db
+from app import db, login
 
 class User(UserMixin, db.Model):
   id = db.Column(db.Integer, primary_key=True)
