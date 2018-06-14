@@ -1,6 +1,10 @@
 venv
 /venv/
 ./venv
+.env
+elasticsearch-6.3.0
+*.zip
+*.zip.sha512
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
