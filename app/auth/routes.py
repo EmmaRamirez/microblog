@@ -7,8 +7,6 @@ from app.auth import bp
 from app.auth.forms import LoginForm, RegistrationForm, \
     ResetPasswordRequestForm, ResetPasswordForm
 from app.models import User
-from app.auth.email import send_password_reset_email
-
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -57,8 +55,6 @@ def reset_password_request():
     form = ResetPasswordRequestForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
-        if user:
-            send_password_reset_email(user)
         flash(
             _('Check your email for the instructions to reset your password'))
         return redirect(url_for('auth.login'))

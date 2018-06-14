@@ -7,7 +7,6 @@ from guess_language import guess_language
 from app import db
 from app.main.forms import EditProfileForm, PostForm
 from app.models import User, Post
-from app.translate import translate
 from app.main import bp
 
 
