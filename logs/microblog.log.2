@@ -1,4 +1,96 @@
-2018-06-12 00:21:25,172 ERROR: Exception on /login [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+2018-06-13 22:41:55,695 ERROR: Exception on / [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2087, in preprocess_request
+    rv = func()
+  File "/mnt/d/Code/microblog/app/main/routes.py", line 17, in before_request
+    if current_user.is_authenticated:
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/mnt/d/Code/microblog/app/models.py", line 116, in load_user
+    return User.query.get(int(id))
+  File "/usr/local/lib/python3.5/dist-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/mapper.py", line 1272, in _configure_all
+    configure_mappers()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/mapper.py", line 3026, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper|User|user'. Original exception was: Error creating backref 'author' on relationship 'User.messages_recieved': property of that name exists on mapper 'Mapper|Message|message'
+2018-06-13 22:41:59,713 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-13 22:43:21,174 ERROR: Exception on / [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2087, in preprocess_request
+    rv = func()
+  File "/mnt/d/Code/microblog/app/main/routes.py", line 17, in before_request
+    if current_user.is_authenticated:
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/mnt/d/Code/microblog/app/models.py", line 116, in load_user
+    return User.query.get(int(id))
+  File "/usr/local/lib/python3.5/dist-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/mapper.py", line 1272, in _configure_all
+    configure_mappers()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/mapper.py", line 3029, in configure_mappers
+    mapper._post_configure_properties()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/mapper.py", line 1828, in _post_configure_properties
+    prop.init()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/interfaces.py", line 184, in init
+    self.do_init()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/relationships.py", line 1659, in do_init
+    self._generate_backref()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/relationships.py", line 1849, in _generate_backref
+    (backref_key, self, m))
+sqlalchemy.exc.ArgumentError: Error creating backref 'author' on relationship 'User.messages_recieved': property of that name exists on mapper 'Mapper|Message|message'
+2018-06-13 22:44:43,022 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-13 22:44:48,501 ERROR: Exception on /messages [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,47 +104,18 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/mnt/d/Code/microblog/app/routes.py", line 55, in login
-    return render_template('login.html', title='Sign In', form=form)
-  File "/usr/local/lib/python3.5/dist-packages/flask/templating.py", line 135, in render_template
-    context, ctx.app)
-  File "/usr/local/lib/python3.5/dist-packages/flask/templating.py", line 117, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.5/dist-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/usr/local/lib/python3.5/dist-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/mnt/d/Code/microblog/app/templates/login.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/mnt/d/Code/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.5/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.5/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
-    {%- block html %}
-  File "/usr/local/lib/python3.5/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
-    {% block body -%}
-  File "/usr/local/lib/python3.5/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
-    {% block content -%}
-  File "/mnt/d/Code/microblog/app/templates/base.html", line 48, in block "content"
-    {% block app_content %}{% endblock %}
-  File "/mnt/d/Code/microblog/app/templates/login.html", line 15, in block "app_content"
-    <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
-  File "/usr/local/lib/python3.5/dist-packages/flask/helpers.py", line 356, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2061, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/dist-packages/flask/helpers.py", line 345, in url_for
-    force_external=external)
-  File "/usr/local/lib/python3.5/dist-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
-2018-06-12 00:23:26,187 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:45]
-2018-06-12 00:23:29,283 ERROR: Exception on /login [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/d/Code/microblog/app/main/routes.py", line 176, in messages
+    messages = current_user.messages_received.order_by(
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'messages_received'
+2018-06-13 22:45:30,264 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-13 22:45:33,884 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-13 22:45:41,740 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-13 22:46:51,779 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-13 22:47:35,464 ERROR: Exception on /send_message/katy [POST] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -66,42 +129,12 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/mnt/d/Code/microblog/app/routes.py", line 55, in login
-    return render_template('login.html', title='Sign In', form=form)
-  File "/usr/local/lib/python3.5/dist-packages/flask/templating.py", line 135, in render_template
-    context, ctx.app)
-  File "/usr/local/lib/python3.5/dist-packages/flask/templating.py", line 117, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.5/dist-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/usr/local/lib/python3.5/dist-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/mnt/d/Code/microblog/app/templates/login.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/mnt/d/Code/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.5/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.5/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
-    {%- block html %}
-  File "/usr/local/lib/python3.5/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
-    {% block body -%}
-  File "/usr/local/lib/python3.5/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
-    {% block content -%}
-  File "/mnt/d/Code/microblog/app/templates/base.html", line 48, in block "content"
-    {% block app_content %}{% endblock %}
-  File "/mnt/d/Code/microblog/app/templates/login.html", line 15, in block "app_content"
-    <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
-  File "/usr/local/lib/python3.5/dist-packages/flask/helpers.py", line 356, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2061, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/dist-packages/flask/helpers.py", line 345, in url_for
-    force_external=external)
-  File "/usr/local/lib/python3.5/dist-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/d/Code/microblog/app/main/routes.py", line 167, in send_message
+    return redirect_url(url_for('main.user', username=recipient))
+NameError: name 'redirect_url' is not defined
+2018-06-13 22:48:21,864 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-14 13:57:11,003 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-14 13:57:15,138 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
+2018-06-14 14:14:08,682 INFO: Microblog startup [in /mnt/d/Code/microblog/app/__init__.py:78]
