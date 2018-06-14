@@ -1,0 +1,41 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-12 22:22-0600\n"
+"PO-Revision-Date: 2018-06-12 22:23-0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: app/__init__.py:19
+msgid "Please log in to access this page."
+msgstr ""
+
+#: app/forms.py:8
+msgid "Username"
+msgstr ""
+
+#: app/routes.py:27
+msgid "Your post is now live!"
+msgstr ""
+
+#: app/templates/404.html:4
+msgid "File Not Found"
+msgstr ""
+
+#: app/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
