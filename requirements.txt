@@ -45,7 +45,7 @@ python-dotenv==0.8.2
 python-editor==1.0.3
 python-systemd==231
 pytz==2017.3
-PyYAML==3.11
+PyYAML==5.4
 requests==2.9.1
 six==1.10.0
 SQLAlchemy==1.2.8
